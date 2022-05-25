@@ -1,16 +1,11 @@
-/* eslint-disable */
+const { useQuasar } = require("quasar")
+
 <template>
 
     <div class='flex center'>
-      <q-card align="center">
+      <q-card >
         <q-card-section>
-          <img
-            alt="Direct Logo"
-            src="~assets/ds_logo.png"
-            style="width: 400; height: 400px"
-          />
-
-          <q-form class="q-gutter-md" @submit.prevent='submit'>
+          <q-form  class="q-gutter-md" @submit.prevent="submit">
             <q-input label="Username" v-model='login.username'> </q-input>
             <q-input label="Password" type="password" v-model='login.password'> </q-input>
             <div>
@@ -26,6 +21,9 @@
 </template>
 
 <script>
+import { useQuasar } from 'quasar'
+let $q
+
 export default {
   name: "LoginPage",
   data() {
@@ -39,15 +37,26 @@ export default {
   methods: {
     submit() {
       if (!this.login.username || !this.login.password ) {
-        log.console('error')
+        $q.notify({
+          type: 'negative',
+          message: 'Wrong Password! Try Again'
+        })
+        console.log('Wrong Password!')
       }
       else{
+        $q.notify({
+          type: 'positive',
+          message: 'Welcome!'
+        })
         console.log('hello')
       }
 
     }
+  },
+  mounted(){
+    $q = useQuasar()
   }
-};
+}
 </script>
 
 <style>
