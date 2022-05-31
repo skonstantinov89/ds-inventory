@@ -6,7 +6,7 @@ const { useQuasar } = require("quasar")
   <div class="row" style="height: 90vh">
     <div v-bind:class="{'justify-center': $q.screen.md || $q.screen.sm ||$q.screen.xs}"
          class="col-12 col-md-6 flex content-center">
-      <q-card v-bind:style="$q.screen.lt.sm ? {'width': '80%'} : {'width': '50%'}">
+      <q-card class="loginStyle" v-bind:style="$q.screen.lt.sm ? {'width': '80%'} : {'width': '50%'}">
         <q-card-section>
           <q-avatar size="103px" class="absolute-center shadow-10">
             <img src="~assets/thumbnail.png" alt="avatar">
@@ -75,6 +75,9 @@ export default {
 </script>
 
 <style scoped>
+body {
+  background-color: green;
+}
 /* div.form {
   display: block;
   text-align: center;
