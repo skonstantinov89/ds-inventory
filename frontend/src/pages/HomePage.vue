@@ -30,6 +30,37 @@
     </q-drawer>
 
     <q-page-container>
+      <q-fab
+        color="orange"
+        icon ="add"
+        padding = "sm"
+        direction = "down"
+      >
+        <q-fab-action
+          icon='edit'
+          color = "purple"
+        />
+
+        <q-fab-action
+          icon="add"
+          color='green'
+        />
+
+        <q-fab-action
+          icon="check"
+          color="blue"
+
+        />
+
+      </q-fab>
+
+      <q-btn
+      label = "Log File"
+      icon = "print"
+      color = "green"
+      padding = "sm"
+      />
+
       <router-view />
     </q-page-container>
   </q-layout>
@@ -41,46 +72,16 @@ import EssentialLink from "components/EssentialLink.vue";
 
 const linksList = [
   {
+    title: "Dashboard",
+    caption: "",
+    icon: "dashboard",
+    link: "http://localhost:8081/#/test",
+  },
+  {
     title: "Inventory",
     caption: "Check Inventory, Create, Edit, Delete",
-    icon: "school",
-    link: "https://quasar.dev",
-  },
-  {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
-  },
-  {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev",
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
-  },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev",
-  },
-  {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev",
+    icon: "edit",
+    link: "http://localhost:8081/#/test/dashboard",
   },
 ];
 
