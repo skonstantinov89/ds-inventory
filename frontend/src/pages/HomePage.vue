@@ -12,7 +12,14 @@
         />
 
         <q-toolbar-title> DS Inventory </q-toolbar-title>
+        <div>
+          <q-btn
+            icon= "logout"
+            round
+            flat
 
+          />
+        </div>
 
       </q-toolbar>
     </q-header>

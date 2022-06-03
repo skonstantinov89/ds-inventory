@@ -1,17 +1,17 @@
 const routes = [
   {
-    path: "/test",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [{ path: "/test/dashboard", component: () => import("pages/DashboardPage.vue") }],
-  },
-  {
     path: "/home",
-    component: () => import("pages/HomePage.vue"),
+    component: () => import("layouts/MainLayout.vue"),
+    children: [{ path: "/test/dashboard", component: () => import("pages/HomePage.vue") }],
   },
-  {
-    path: "/",
-    component: () => import("pages/Login.vue"),
-  },
+  // {
+  //   path: "/home",
+  //   component: () => import("pages/HomePage.vue"),
+  // },
+  // {
+  //   path: "/",
+  //   component: () => import("pages/Login.vue"),
+  // },
 
   // Always leave this as last one,
   // but you can also remove it
